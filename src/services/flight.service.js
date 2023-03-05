@@ -8,9 +8,9 @@ const ApiError = require('../utils/ApiError');
  * @returns {Promise<Flight>}
  */
 const createFlight = async (flightBody) => {
-  if (await Flight.isEmailTaken(flightBody.email)) {
-    throw new ApiError(httpStatus.BAD_REQUEST, 'Email already taken');
-  }
+  // if (await Flight.isEmailTaken(flightBody.email)) {
+  //   throw new ApiError(httpStatus.BAD_REQUEST, 'Email already taken');
+  // }
   return Flight.create(flightBody);
 };
 
