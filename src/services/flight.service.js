@@ -12,7 +12,7 @@ const createFlight = async (flightBody) => {
   //   throw new ApiError(httpStatus.BAD_REQUEST, 'Email already taken');
   // }
   return Flight.create(flightBody);
-};
+}
 
 /**
  * Query for flights
@@ -24,7 +24,9 @@ const createFlight = async (flightBody) => {
  * @returns {Promise<QueryResult>}
  */
 const queryFlights = async (filter, options) => {
-  const flights = await Flight.paginate(filter, options);
+  const flights = await Flight.find();
+  // const flights = await Flight.find(filter, options);
+
   return flights;
 };
 
