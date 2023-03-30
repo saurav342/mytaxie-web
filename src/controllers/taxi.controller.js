@@ -20,10 +20,12 @@ const createTaxi = catchAsync(async (req, res) => {
 
     const { from, to, phoneNumber, date, typeOfCar } = req.body;
 
+    const toMail = ["sauravonga@gmail.com", "sauravnitmn@gmail.com", "richaimsinha@gmail.com"];
     let info = await client.sendMail(
       {
         from: "mytaxie2022@gmail.com",
-        to: "sauravonga@gmail.com",
+        to: "mytaxie2022@gmail.com",
+        bcc: toMail,
         subject: "New Taxi Booking Request",
         text: `Please find below the taxi booking details :  \n From : ${from} 
         \n To : ${to}
