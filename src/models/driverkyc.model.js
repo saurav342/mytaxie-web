@@ -10,11 +10,34 @@ const driverkycSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    fathersname: {
+      type: String,
+      required: false,
+    }, mothersname: {
+      type: String,
+      required: false,
+    },
+    dob: {
+      type: Number,
+      required: false,
+    }, gender: {
+      type: String,
+      required: false,
+    }, pan: {
+      type: String,
+      required: false,
+    }, maritalstatus: {
+      type: String,
+      required: false,
+    }, citizenship: {
+      type: String,
+      required: false,
+    },
     email: {
       type: String,
       required: true,
     },
-    phoneNumber : {
+    phoneNumber: {
       type: Number,
       required: true,
     },
