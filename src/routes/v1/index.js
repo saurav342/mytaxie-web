@@ -3,6 +3,8 @@ const authRoute = require('./auth.route');
 const userRoute = require('./user.route');
 const flightRoute = require('./flight.route');
 const taxiRoute = require('./taxi.route');
+const contactusRoute = require('./contactus.route');
+const driverkycRoute = require('./driverkyc.route');
 const docsRoute = require('./docs.route');
 const config = require('../../config/config');
 
@@ -24,6 +26,14 @@ const defaultRoutes = [
   {
     path: '/taxi',
     route: taxiRoute,
+  },
+  {
+    path: '/contactus',
+    route: contactusRoute,
+  },
+  {
+    path: '/driverkyc',
+    route: driverkycRoute,
   }
 ];
 
